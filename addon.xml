@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.freedisc"
+       name=".[COLOR yellow]Freedisc[/COLOR].[COLOR red]pl[/COLOR]"
+       version="1.1.1"
+       provider-name="[COLOR blue]heni[/COLOR]">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+	 <import addon="script.module.requests" version="1.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL 2.0</license>
+        <summary lang="en">Freedisc.pl</summary>
+        <description lang="en">pliki wideo z Freedisc.pl</description>
+    </extension>
+</addon>
