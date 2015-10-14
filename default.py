@@ -79,6 +79,7 @@ def INDEX(url,query,page):
                 #print "katalogi = %s: %s" % (key, katalogi[key])
         for key in sorted(users):
                 addDir('Katalog domowy : '+key,users[key],4,'','','')
+                print users[key]
         current_page = parsed_json['response']['page']
         next_page_nr = current_page + 1
         #print str(next_page_nr) + " nrnr"
@@ -101,7 +102,7 @@ def INDEX3(url):
                 thumb = thumb.replace("/18/2/", "/7/2/")
                 addDownLink(name , url,4, thumb,fileid)
                 #addDir(name,url,2,thumb)
-        matchdir = re.compile('<div class="dir-item"><div class=\'data\'><div class=\'icon\'><img src=\'img/icons/big_dir.png\'></div><div class=\'name text-ellipsis\'><a href="(.+?)">(.+?)</a>').findall(link)
+        matchdir = re.compile('<div class="CssTreeValue"><a href="/(.+?)" title="(.+?)" >').findall(link)
         for folderurl,title in  matchdir:
                 folderurl='http://freedisc.pl/' + folderurl
                 title = title
@@ -273,4 +274,3 @@ elif mode == 4:
 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
-
