@@ -65,7 +65,7 @@ def INDEX(url,query,page):
                 nazwa_katalogu = parsed_json['response']['directories_translated'][str(id_katalogu_nadrzednego)]['name_url']
                 directory_url = 'http://freedisc.pl/'+nick_usera+',d-'+id_katalogu_nadrzednego+','+nazwa_katalogu
                 #print directory_url
-                users[nick_usera]=('http://freedisc.pl/'+nick_usera+',d-'+root_dir_id+','+nick_usera)
+                users[nick_usera]=('http://freedisc.pl/'+nick_usera)#+',d-'+root_dir_id+','+nick_usera)
                 katalogi[nazwa_katalogu]=(directory_url,nick_usera)
                 #sortowanie wg key ( name)
                 tablica[name] = (url,thumb,f_id) # dictionary of tuples tablica[key] = (value1,value2,value3) tablica[key](tuple)
